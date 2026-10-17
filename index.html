@@ -1,2 +1,106 @@
-<!DOCTYPE html>
-<h1> Gab Developpeur </h1>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Gabriel Bois, designer d'interfaces et de récits visuels.">
+  <title>Gabriel Bois — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oxanium:wght@400;500;600;700;800&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gabriel Bois, accueil">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">Gabriel Bois</span>
+      <span class="brand-note">Développeur gameplay</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="projets.html">Projets</a>
+      <a href="r-d.html">R&amp;D</a>
+    </nav>
+  </header>
+  <main id="contenu">
+  <section class="intro intro--compact" aria-labelledby="titre-principal">
+    <div class="intro-copy">
+      <div class="eyebrow">Développeur de jeux vidéo · Portfolio 2026</div>
+      <h1 id="titre-principal">Je façonne des mondes à explorer.</h1>
+      <p class="lede">
+        Je suis Gabriel, développeur de jeux vidéo. Ma passion, créer des mécaniques de jeu immersives
+        et des outils permettant d'aider les équipes à concrétiser leurs visions.
+      </p>
+      <p class="lede">
+        Je travaille principalement sur Unity, mais j'ai également de l'expérience avec
+        Unreal Engine.
+      </p>
+    </div>
+
+    <a class="cta" href="projets.html">Voir tous mes projets</a>
+  </section>
+    <section aria-labelledby="projet-en-vedette">
+      <div class="section-label"><span>Projet en vedette / 01</span></div>
+      <article class="project-card project-card--featured">
+        <div class="project-main">
+          <div class="project-art project-art--game">
+            <img
+              class="project-image"
+              src="imgs/cavernersImg1.jpg"
+              alt="Capture d’écran de Caverners"
+            >
+            <span class="image-blur" aria-hidden="true"></span>
+            <span class="image-vignette" aria-hidden="true"></span>
+          </div>
+
+          <div class="project-copy">
+            <div class="kicker">Action-Shooter · Roguelite</div>
+            <h2 id="projet-en-vedette">Caverners</h2>
+            <p>
+              Jeu de tir à la première personne ultra dynamique, avec des mécaniques
+              de déplacement permettant d'accumuler de la vitesse. Passez les vagues d'ennemis
+              et protégez les sites d'extractions de minerai dans ce genre reprenant la structure
+              Roguelike.<b> Prototype jouable disponible.</b>
+            </p>
+
+            <ul class="project-tasks" aria-label="Mes tâches sur le projet">
+              <li>Character Controller</li>
+              <li>Ajout de mission avec le système établi</li>
+              <li>Effets visuels et sonores + intégration</li>
+              <li>Outil pour les sous-titres</li>
+              <li>Aide à la visée</li>
+            </ul>
+
+            <div class="tags">
+              <span class="tag">Unity 2022</span>
+              <span class="tag">FPS</span>
+              <span class="tag">FMOD</span>
+            </div>
+
+            <a class="project-link" href="resources/GDD_Caverners.pdf" download>Game Design Document ↗</a>
+          </div>
+        </div>
+
+        <div class="project-meta">
+          <div class="meta-cell">
+            <span class="meta-label">Caméra</span>
+            <span class="meta-value">Première personne</span>
+          </div>
+          <div class="meta-cell">
+            <span class="meta-label">Genre</span>
+            <span class="meta-value">FPS Extraction Game</span>
+          </div>
+          <div class="meta-cell">
+            <span class="meta-label">Moteur</span>
+            <span class="meta-value">Unity · URP</span>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><span>2026 Gabriel Bois</span></footer>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
