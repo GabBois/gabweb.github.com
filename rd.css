@@ -63,9 +63,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  min-height: 40px;
-  margin-top: auto;
+  width: 50%;
+  min-height: 30px;
+  margin-top: 5px;
   padding: 10px 12px;
 
   appearance: none;
