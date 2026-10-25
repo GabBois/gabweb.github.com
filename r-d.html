@@ -149,6 +149,86 @@
           <p>Système permettant de faire coller dynamiquement deux objets dans l'espace 3D.</p>
           <div class="tags"><span class="tag">Unity</span><span class="tag">Maths</span></div>
           <button class="rd-card__detail" type="button" aria-haspopup="dialog" aria-controls="rd-modal" data-rd-detail data-card-id="piste-02" data-modal-image="assets/rd-images/placeholder-piste-02.jpg" data-modal-image-alt="Capture à remplacer pour piste-02">Voir le détail <span aria-hidden="true">↗</span></button>
+        
+          <template data-rd-document>
+            <header class="rd-doc__header">
+              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
+              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__intro">
+                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
+                les sous-titres des scènes de jeu.
+              </p>
+              <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Tooling</span>
+              </div>
+            </header>
+
+            <section class="rd-doc__section">
+              <h3>01 — Contexte et problème</h3>
+              <p>
+                La modification des sous-titres directement dans les fichiers de scène
+                rendait les itérations longues et difficiles à relire. L’objectif était
+                de permettre une édition rapide depuis l’éditeur Unity.
+              </p>
+            </section>
+
+            <section class="rd-doc__section">
+              <h3>02 — Objectifs de conception</h3>
+              <ul>
+                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
+                <li>Associer un texte à un intervenant et à un minutage.</li>
+                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+              </ul>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres.jpg"
+                alt="Vue de l’éditeur de sous-titres dans Unity"
+                loading="lazy">
+              <figcaption>
+                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>03 — Fonctionnement</h3>
+              <p>
+                Chaque entrée contient le texte, l’identifiant du personnage, la durée
+                d’affichage et les options de présentation. Les données sont enregistrées
+                dans un asset dédié, puis lues au lancement de la scène.
+              </p>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
+                alt="Exemple de minutage des sous-titres"
+                loading="lazy">
+              <figcaption>
+                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>04 — Résultat et limites</h3>
+              <p>
+                L’outil facilite les modifications rapides et la relecture du contenu.
+                Il reste à améliorer la prévisualisation des longues répliques et la
+                gestion des traductions.
+              </p>
+            </section>
+
+            <section class="rd-doc__section rd-doc__section--highlight">
+              <h3>05 — Prochaines étapes</h3>
+              <ul>
+                <li>Ajouter une prévisualisation des différentes résolutions.</li>
+                <li>Étudier l’import et l’export de fichiers de traduction.</li>
+              </ul>
+            </section>
+          </template>
+        
         </article>
 
         <article class="rd-card" aria-labelledby="rd-piste-03">
@@ -159,6 +239,86 @@
           <p>Mise en place d'un système de reconnaissance vocale pour diriger le personnage.</p>
           <div class="tags"><span class="tag">Unity</span><span class="tag">Library</span></div>
           <button class="rd-card__detail" type="button" aria-haspopup="dialog" aria-controls="rd-modal" data-rd-detail data-card-id="piste-03" data-modal-image="assets/rd-images/placeholder-piste-03.jpg" data-modal-image-alt="Capture à remplacer pour piste-03">Voir le détail <span aria-hidden="true">↗</span></button>
+        
+          <template data-rd-document>
+            <header class="rd-doc__header">
+              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
+              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__intro">
+                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
+                les sous-titres des scènes de jeu.
+              </p>
+              <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Tooling</span>
+              </div>
+            </header>
+
+            <section class="rd-doc__section">
+              <h3>01 — Contexte et problème</h3>
+              <p>
+                La modification des sous-titres directement dans les fichiers de scène
+                rendait les itérations longues et difficiles à relire. L’objectif était
+                de permettre une édition rapide depuis l’éditeur Unity.
+              </p>
+            </section>
+
+            <section class="rd-doc__section">
+              <h3>02 — Objectifs de conception</h3>
+              <ul>
+                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
+                <li>Associer un texte à un intervenant et à un minutage.</li>
+                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+              </ul>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres.jpg"
+                alt="Vue de l’éditeur de sous-titres dans Unity"
+                loading="lazy">
+              <figcaption>
+                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>03 — Fonctionnement</h3>
+              <p>
+                Chaque entrée contient le texte, l’identifiant du personnage, la durée
+                d’affichage et les options de présentation. Les données sont enregistrées
+                dans un asset dédié, puis lues au lancement de la scène.
+              </p>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
+                alt="Exemple de minutage des sous-titres"
+                loading="lazy">
+              <figcaption>
+                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>04 — Résultat et limites</h3>
+              <p>
+                L’outil facilite les modifications rapides et la relecture du contenu.
+                Il reste à améliorer la prévisualisation des longues répliques et la
+                gestion des traductions.
+              </p>
+            </section>
+
+            <section class="rd-doc__section rd-doc__section--highlight">
+              <h3>05 — Prochaines étapes</h3>
+              <ul>
+                <li>Ajouter une prévisualisation des différentes résolutions.</li>
+                <li>Étudier l’import et l’export de fichiers de traduction.</li>
+              </ul>
+            </section>
+          </template>
+        
         </article>
 
         <article class="rd-card" aria-labelledby="rd-piste-04">
@@ -169,6 +329,86 @@
           <p>Inspecteur personnalisé pour gérer les points d'intérêt d'un parcours dans l'éditeur.</p>
           <div class="tags"><span class="tag">Tooling</span><span class="tag">CustomInspector</span></div>
           <button class="rd-card__detail" type="button" aria-haspopup="dialog" aria-controls="rd-modal" data-rd-detail data-card-id="piste-04" data-modal-image="assets/rd-images/placeholder-piste-04.jpg" data-modal-image-alt="Capture à remplacer pour piste-04">Voir le détail <span aria-hidden="true">↗</span></button>
+        
+          <template data-rd-document>
+            <header class="rd-doc__header">
+              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
+              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__intro">
+                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
+                les sous-titres des scènes de jeu.
+              </p>
+              <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Tooling</span>
+              </div>
+            </header>
+
+            <section class="rd-doc__section">
+              <h3>01 — Contexte et problème</h3>
+              <p>
+                La modification des sous-titres directement dans les fichiers de scène
+                rendait les itérations longues et difficiles à relire. L’objectif était
+                de permettre une édition rapide depuis l’éditeur Unity.
+              </p>
+            </section>
+
+            <section class="rd-doc__section">
+              <h3>02 — Objectifs de conception</h3>
+              <ul>
+                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
+                <li>Associer un texte à un intervenant et à un minutage.</li>
+                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+              </ul>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres.jpg"
+                alt="Vue de l’éditeur de sous-titres dans Unity"
+                loading="lazy">
+              <figcaption>
+                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>03 — Fonctionnement</h3>
+              <p>
+                Chaque entrée contient le texte, l’identifiant du personnage, la durée
+                d’affichage et les options de présentation. Les données sont enregistrées
+                dans un asset dédié, puis lues au lancement de la scène.
+              </p>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
+                alt="Exemple de minutage des sous-titres"
+                loading="lazy">
+              <figcaption>
+                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>04 — Résultat et limites</h3>
+              <p>
+                L’outil facilite les modifications rapides et la relecture du contenu.
+                Il reste à améliorer la prévisualisation des longues répliques et la
+                gestion des traductions.
+              </p>
+            </section>
+
+            <section class="rd-doc__section rd-doc__section--highlight">
+              <h3>05 — Prochaines étapes</h3>
+              <ul>
+                <li>Ajouter une prévisualisation des différentes résolutions.</li>
+                <li>Étudier l’import et l’export de fichiers de traduction.</li>
+              </ul>
+            </section>
+          </template>
+        
         </article>
 
         <article class="rd-card" aria-labelledby="rd-piste-05">
@@ -179,6 +419,86 @@
           <p>Intégration du tchat Twitch dans un canvas de l'environnement pour une scène de ma chaîne.</p>
           <div class="tags"><span class="tag">Unity</span><span class="tag">Library</span><span class="tag">Networking</span></div>
           <button class="rd-card__detail" type="button" aria-haspopup="dialog" aria-controls="rd-modal" data-rd-detail data-card-id="piste-05" data-modal-image="assets/rd-images/placeholder-piste-05.jpg" data-modal-image-alt="Capture à remplacer pour piste-05">Voir le détail <span aria-hidden="true">↗</span></button>
+        
+          <template data-rd-document>
+            <header class="rd-doc__header">
+              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
+              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__intro">
+                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
+                les sous-titres des scènes de jeu.
+              </p>
+              <div class="tags">
+                <span class="tag">Unity</span>
+                <span class="tag">Tooling</span>
+              </div>
+            </header>
+
+            <section class="rd-doc__section">
+              <h3>01 — Contexte et problème</h3>
+              <p>
+                La modification des sous-titres directement dans les fichiers de scène
+                rendait les itérations longues et difficiles à relire. L’objectif était
+                de permettre une édition rapide depuis l’éditeur Unity.
+              </p>
+            </section>
+
+            <section class="rd-doc__section">
+              <h3>02 — Objectifs de conception</h3>
+              <ul>
+                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
+                <li>Associer un texte à un intervenant et à un minutage.</li>
+                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+              </ul>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres.jpg"
+                alt="Vue de l’éditeur de sous-titres dans Unity"
+                loading="lazy">
+              <figcaption>
+                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>03 — Fonctionnement</h3>
+              <p>
+                Chaque entrée contient le texte, l’identifiant du personnage, la durée
+                d’affichage et les options de présentation. Les données sont enregistrées
+                dans un asset dédié, puis lues au lancement de la scène.
+              </p>
+            </section>
+
+            <figure class="rd-doc__figure">
+              <img
+                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
+                alt="Exemple de minutage des sous-titres"
+                loading="lazy">
+              <figcaption>
+                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+              </figcaption>
+            </figure>
+
+            <section class="rd-doc__section">
+              <h3>04 — Résultat et limites</h3>
+              <p>
+                L’outil facilite les modifications rapides et la relecture du contenu.
+                Il reste à améliorer la prévisualisation des longues répliques et la
+                gestion des traductions.
+              </p>
+            </section>
+
+            <section class="rd-doc__section rd-doc__section--highlight">
+              <h3>05 — Prochaines étapes</h3>
+              <ul>
+                <li>Ajouter une prévisualisation des différentes résolutions.</li>
+                <li>Étudier l’import et l’export de fichiers de traduction.</li>
+              </ul>
+            </section>
+          </template>
+        
         </article>
       </div>
     </section>
