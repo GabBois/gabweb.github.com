@@ -279,19 +279,28 @@
 
 .rd-doc__figure img {
   display: block;
-  width: 100%;
+  width: 95%;
   max-height: 560px;
   object-fit: contain;
   border: 1px solid var(--line);
   background: #171c19;
 }
 
-.rd-doc__figure figcaption {
+.rd-doc__figure figcaption, .rd-doc__figure_2 figcaption {
   margin-top: 9px;
   color: var(--muted);
   font-family: var(--mono);
   font-size: .68rem;
   line-height: 1.6;
+}
+
+.rd-doc__figure_2 img{
+  display: inline;
+  margin: 0 2.5%;
+  width: 50%;
+  max-height: 560px;
+  border: 1px solid var(--line);
+  background: #171c19;
 }
 
 body.rd-modal-open {
