@@ -53,7 +53,7 @@
       <div class="rd-grid">
         <article class="rd-card" aria-labelledby="rd-piste-01">
           <div class="rd-card__top"><span class="rd-number">01</span><span class="rd-status rd-status--archive">Archivé</span></div>
-          <div class="rd-card__visual rd-card__visual--signal" aria-hidden="true"><span></span><i></i><b></b></div>
+          <div class="rd-card__visual" aria-hidden="true"><img src="imgs/subtitles1.png" alt="Vue de l’éditeur de sous-titres dans Unity" loading="lazy"></div>
           <div class="kicker">Outil · Fonctionnalité</div>
           <h2 id="rd-piste-01">Éditeur de sous-titres</h2>
           <p>Editeur dans le moteur permettant de créer et modifier des sous-titres pour les scènes de jeu.</p>
@@ -166,80 +166,81 @@
           <template data-rd-document>
             <header class="rd-doc__header">
               <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
-              <h2>Éditeur de sous-titres</h2>
+              <h2>Snapping dynamique</h2>
               <p class="rd-doc__intro">
-                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
-                les sous-titres des scènes de jeu.
+                Système permettant de faire coller dynamiquement deux objets dans l'espace 3D.
               </p>
               <div class="tags">
                 <span class="tag">Unity</span>
-                <span class="tag">Tooling</span>
+                <span class="tag">Maths</span>
               </div>
             </header>
 
             <section class="rd-doc__section">
               <h3>01 — Contexte et problème</h3>
               <p>
-                La modification des sous-titres directement dans les fichiers de scène
-                rendait les itérations longues et difficiles à relire. L’objectif était
-                de permettre une édition rapide depuis l’éditeur Unity.
+                Le gameplay de Gears consiste à placer des rouages dans un espace 3D pour faire tourner un mécanisme.
+                Le joueur doit pouvoir placer correctement les rouages sans lui demander de précision extrême.
               </p>
             </section>
 
             <section class="rd-doc__section">
               <h3>02 — Objectifs de conception</h3>
               <ul>
-                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
-                <li>Associer un texte à un intervenant et à un minutage.</li>
-                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+                <li>Rendre le placement des rouages intuitif et précis.</li>
+                <li>Ne pas exiger une précision extrême du joueur.</li>
+                <li>Assurer une bonne performance du système dans les scènes complexes.</li>
               </ul>
             </section>
 
-            <figure class="rd-doc__figure">
+            <figure class="rd-doc__figure_white">
               <img
-                src="assets/rd-images/editeur-sous-titres.jpg"
+                src="imgs/snap1.png"
                 alt="Vue de l’éditeur de sous-titres dans Unity"
                 loading="lazy">
               <figcaption>
-                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+                Schéma illustrant le fonctionnement de la détection de l'objet à snapper.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
               <h3>03 — Fonctionnement</h3>
               <p>
-                Chaque entrée contient le texte, l’identifiant du personnage, la durée
-                d’affichage et les options de présentation. Les données sont enregistrées
-                dans un asset dédié, puis lues au lancement de la scène.
+                Dès qu'un joueur prend un objet, le système calcul la distance entre l'objet et les autres objets autour de celui-ci.
+                L'objet le plus proche est enregistré et on vérifie si la distance entre les deux est inférieur à une valeur seuil.
+                Si c'est le cas, l'objet est snapé à l'autre objet et on calcule ensuite la distance entre le curseur et l'objet snapé
+                pour déterminer le moment où le joueur souhaite détacher l'objet snapé. 
+                Le système est optimisé pour ne pas calculer la distance avec tous les objets de la scène mais seulement avec ceux qui sont dans un rayon défini autour de l'objet.
               </p>
             </section>
 
-            <figure class="rd-doc__figure">
+            <figure class="rd-doc__figure_white">
               <img
-                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
+                src="imgs/snap2.png"
                 alt="Exemple de minutage des sous-titres"
                 loading="lazy">
               <figcaption>
-                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+                Schéma illustrant les vecteurs et les distances calculées entre les deux objets.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
-              <h3>04 — Résultat et limites</h3>
               <p>
-                L’outil facilite les modifications rapides et la relecture du contenu.
-                Il reste à améliorer la prévisualisation des longues répliques et la
-                gestion des traductions.
+                Le système applique plusieurs calculs de distance pour créer la velocité de snap <it>VFinal</it> et la distance de détachement.
+                Tout est détaillé dans le Game Design Document.
               </p>
             </section>
 
-            <section class="rd-doc__section rd-doc__section--highlight">
-              <h3>05 — Prochaines étapes</h3>
-              <ul>
-                <li>Ajouter une prévisualisation des différentes résolutions.</li>
-                <li>Étudier l’import et l’export de fichiers de traduction.</li>
-              </ul>
+            <section class="rd-doc__section">
+              <h3>04 — Résultat et limites</h3>
+              <p>
+                Le système permet de placer correctement les rouages sans demander de précision comme voulu.
+                Le problème principal est que des valeurs de seuil doivent être définis pour chaque cas de snap (ex: petit rouage contre grand rouage,
+                petit rouage contre petit rouage, etc...) notamment pour la valeur de distance de détachement.
+                Il est donc nécessaire de faire des tests pour chaque cas de snap et d'ajuster les valeurs de seuil en conséquence.
+              </p>
             </section>
+
           </template>
         
         </article>
