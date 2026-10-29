@@ -210,14 +210,15 @@
                 L'objet le plus proche est enregistré et on vérifie si la distance entre les deux est inférieur à une valeur seuil.
                 Si c'est le cas, l'objet est snapé à l'autre objet et on calcule ensuite la distance entre le curseur et l'objet snapé
                 pour déterminer le moment où le joueur souhaite détacher l'objet snapé. 
-                Le système est optimisé pour ne pas calculer la distance avec tous les objets de la scène mais seulement avec ceux qui sont dans un rayon défini autour de l'objet.
+                Le système est optimisé pour ne pas calculer la distance avec tous les objets de la scène 
+                mais seulement avec ceux qui sont dans un rayon défini autour de l'objet.
               </p>
             </section>
 
             <figure class="rd-doc__figure_white">
               <img
                 src="imgs/snap2.png"
-                alt="Exemple de minutage des sous-titres"
+                alt="Schéma illustrant les vecteurs et les distances calculées entre les deux objets"
                 loading="lazy">
               <figcaption>
                 Schéma illustrant les vecteurs et les distances calculées entre les deux objets.
@@ -346,11 +347,10 @@
         
           <template data-rd-document>
             <header class="rd-doc__header">
-              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
-              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__eyebrow">Outil · Editor</p>
+              <h2>Gestionnaire de points</h2>
               <p class="rd-doc__intro">
-                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
-                les sous-titres des scènes de jeu.
+                Inspecteur personnalisé pour gérer les points d'intérêt d'un parcours dans l'éditeur.
               </p>
               <div class="tags">
                 <span class="tag">Unity</span>
@@ -361,56 +361,62 @@
             <section class="rd-doc__section">
               <h3>01 — Contexte et problème</h3>
               <p>
-                La modification des sous-titres directement dans les fichiers de scène
-                rendait les itérations longues et difficiles à relire. L’objectif était
-                de permettre une édition rapide depuis l’éditeur Unity.
+                Dans le projet Caverners, il y a une mission d'éscorte d'un véhicule. Le véhicule doit suivre un parcours
+                défini par des points d'intérêt. Chaque point d'intérêt est un objet vide à placer sur la scène. Le problème est que 
+                le placement peut être fastidieux et difficile à visualiser dans la scène, en sachant qu'il faut calculer la distance
+                entre chaque point pour que le véhicule puisse faire le parcours en un temps voulu avec une vitesse définie.
               </p>
             </section>
 
             <section class="rd-doc__section">
               <h3>02 — Objectifs de conception</h3>
               <ul>
-                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
-                <li>Associer un texte à un intervenant et à un minutage.</li>
-                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+                <li>Créer un inspecteur personnalisé pour gérer les points d'intérêt du parcours.</li>
+                <li>Afficher la distance et le temps de parcours entre chaque point d'intérêt.</li>
+                <li>Visualiser le parcours et manipuler les points dans la scène.</li>
               </ul>
             </section>
 
             <figure class="rd-doc__figure">
               <img
-                src="assets/rd-images/editeur-sous-titres.jpg"
+                src="imgs/point2.png"
                 alt="Vue de l’éditeur de sous-titres dans Unity"
                 loading="lazy">
               <figcaption>
-                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+                Screenshot de la scène avec le parcours et les points d'intérêt.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
               <h3>03 — Fonctionnement</h3>
               <p>
-                Chaque entrée contient le texte, l’identifiant du personnage, la durée
-                d’affichage et les options de présentation. Les données sont enregistrées
-                dans un asset dédié, puis lues au lancement de la scène.
+                L'inspector permet d'ajouter ou supprimer des points de la liste, de les réorganiser et de changer la vitesse de déplacement
+                de l'agent à escorter. Il calcule la distance entre chaque point et le temps de parcours total en fonction de la vitesse définie.
+                Le parcours est affiché dans la sceneview avec des lignes reliant les points et des labels indiquant l'index de chaque point
+                et la distance entre eux. Le développeur peut aussi déplacer les points directement dans la sceneview grâce à des handles.
+                La ligne verte représente le parcours grâce au NavMesh.
               </p>
             </section>
 
-            <figure class="rd-doc__figure">
+            <figure class="rd-doc__figure_2">
               <img
-                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
-                alt="Exemple de minutage des sous-titres"
+                src="imgs/point1.png"
+                alt="Inspector personnalisé pour gérer les points d'intérêt du parcours"
+                loading="lazy">
+              <img
+                src="imgs/point3.png"
+                alt="Screenshot de la sceneview avec le parcours et les points d'intérêt."
                 loading="lazy">
               <figcaption>
-                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+                Screenshots de l'inspector et de la sceneview avec le parcours et les points d'intérêt.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
               <h3>04 — Résultat et limites</h3>
               <p>
-                L’outil facilite les modifications rapides et la relecture du contenu.
-                Il reste à améliorer la prévisualisation des longues répliques et la
-                gestion des traductions.
+                L'outil reste simple mais permet de gérer les points d'intérêt du parcours plus facilement.
+                Le visuel reste tout de même difficile à lire et il est compliqué de placer au sol correctement les points.
               </p>
             </section>
 
