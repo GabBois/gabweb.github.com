@@ -419,14 +419,6 @@
                 Le visuel reste tout de même difficile à lire et il est compliqué de placer au sol correctement les points.
               </p>
             </section>
-
-            <section class="rd-doc__section rd-doc__section--highlight">
-              <h3>05 — Prochaines étapes</h3>
-              <ul>
-                <li>Ajouter une prévisualisation des différentes résolutions.</li>
-                <li>Étudier l’import et l’export de fichiers de traduction.</li>
-              </ul>
-            </section>
           </template>
         
         </article>
@@ -442,80 +434,73 @@
         
           <template data-rd-document>
             <header class="rd-doc__header">
-              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
-              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__eyebrow">Système · Fonctionnalité</p>
+              <h2>Intégration du tchat Twitch</h2>
               <p class="rd-doc__intro">
-                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
-                les sous-titres des scènes de jeu.
+                Intégration du tchat Twitch dans un canvas de l'environnement pour une scène de ma chaîne.
               </p>
               <div class="tags">
                 <span class="tag">Unity</span>
-                <span class="tag">Tooling</span>
+                <span class="tag">Library</span>
+                <span class="tag">Networking</span>
               </div>
             </header>
 
             <section class="rd-doc__section">
               <h3>01 — Contexte et problème</h3>
               <p>
-                La modification des sous-titres directement dans les fichiers de scène
-                rendait les itérations longues et difficiles à relire. L’objectif était
-                de permettre une édition rapide depuis l’éditeur Unity.
+                Je voulais intégrer le tchat Twitch dans un environnement 3D pour une scène de ma chaîne.
+                L'objectif était de permettre d'avoir une scène sur Unity que je peux compléter avec des assets que
+                je peux créer moi-même et d'avoir des intéractions avec le tchat Twitch en temps réel.
               </p>
             </section>
 
             <section class="rd-doc__section">
               <h3>02 — Objectifs de conception</h3>
               <ul>
-                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
-                <li>Associer un texte à un intervenant et à un minutage.</li>
-                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+                <li>Créer la scène sur Unity.</li>
+                <li>Intégrer le tchat Twitch dans le canvas de l'environnement.</li>
+                <li>Permettre d'avoir des intéractions avec le tchat Twitch en temps réel.</li>
               </ul>
             </section>
 
             <figure class="rd-doc__figure">
               <img
-                src="assets/rd-images/editeur-sous-titres.jpg"
-                alt="Vue de l’éditeur de sous-titres dans Unity"
+                src="imgs/twitch1.png"
+                alt="Screenshot de la scène avec le tchat Twitch intégré dans le canvas"
                 loading="lazy">
               <figcaption>
-                Figure 01 — Vue principale de l’outil dans l’éditeur Unity.
+                Screenshot de la scène.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
               <h3>03 — Fonctionnement</h3>
               <p>
-                Chaque entrée contient le texte, l’identifiant du personnage, la durée
-                d’affichage et les options de présentation. Les données sont enregistrées
-                dans un asset dédié, puis lues au lancement de la scène.
+                J'ai utilisé un système trouvé sur GitHub pour récupérer les messages du tchat Twitch grâce à l'API Twitch.
+                J'ai ensuite filtré les messages pour ne récupérer que les pseudos avec leur couleur et le message.
+                Puis j'ai affiché les messages dans un canvas en créant une copie du prefab de message pour chaque nouveau message reçu.
+                J'ai également ajouté un système de suppression des messages après un certain temps pour éviter d'avoir trop de messages affichés en même temps.
               </p>
             </section>
 
             <figure class="rd-doc__figure">
               <img
-                src="assets/rd-images/editeur-sous-titres-timeline.jpg"
-                alt="Exemple de minutage des sous-titres"
+                src="imgs/twitch2.png"
+                alt="Screenshot de la scène avec le tchat Twitch intégré dans le canvas"
                 loading="lazy">
               <figcaption>
-                Figure 02 — Exemple de minutage et d’enchaînement des lignes.
+                Screenshot de la scène OBS avec le tchat Twitch à droite.
               </figcaption>
             </figure>
 
             <section class="rd-doc__section">
               <h3>04 — Résultat et limites</h3>
               <p>
-                L’outil facilite les modifications rapides et la relecture du contenu.
-                Il reste à améliorer la prévisualisation des longues répliques et la
-                gestion des traductions.
+                Les messages s'affichent bien mais le système ne supporte pas les emotes. J'ai pensé à utiliser l'API Twitch pour 
+                récupérer et télécharger l'emote Twitch lors de sa première apparition dans le tchat et l'enregistrer dans un dossier
+                mais je n'ai pas eu le temps de le faire. Le système est fonctionnel mais il reste à améliorer l'affichage des messages et à ajouter la gestion des emotes.
               </p>
-            </section>
-
-            <section class="rd-doc__section rd-doc__section--highlight">
-              <h3>05 — Prochaines étapes</h3>
-              <ul>
-                <li>Ajouter une prévisualisation des différentes résolutions.</li>
-                <li>Étudier l’import et l’export de fichiers de traduction.</li>
-              </ul>
             </section>
           </template>
         
