@@ -257,33 +257,32 @@
         
           <template data-rd-document>
             <header class="rd-doc__header">
-              <p class="rd-doc__eyebrow">Outil · Fonctionnalité</p>
-              <h2>Éditeur de sous-titres</h2>
+              <p class="rd-doc__eyebrow">Système · Mécanique</p>
+              <h2>Reconnaissance vocale</h2>
               <p class="rd-doc__intro">
-                Un éditeur intégré au moteur pour créer, organiser et prévisualiser
-                les sous-titres des scènes de jeu.
+                Un système de reconnaissance vocale pour diriger le personnage dans le jeu.
               </p>
               <div class="tags">
                 <span class="tag">Unity</span>
-                <span class="tag">Tooling</span>
+                <span class="tag">Library</span>
               </div>
             </header>
 
             <section class="rd-doc__section">
               <h3>01 — Contexte et problème</h3>
               <p>
-                La modification des sous-titres directement dans les fichiers de scène
-                rendait les itérations longues et difficiles à relire. L’objectif était
-                de permettre une édition rapide depuis l’éditeur Unity.
+                Le projet est issue d'une semaine thématique dont le thème était "controlleur alternatif".
+                L'idée est de créer un jeu où le joueur est contrôlé par un controlleur atypique. Mon choix s'est porté
+                sur la voix. Le joueur doit pouvoir se déplacer dans l'environnement en donnant des ordres vocaux au personnage.
               </p>
             </section>
 
             <section class="rd-doc__section">
               <h3>02 — Objectifs de conception</h3>
               <ul>
-                <li>Créer et modifier des lignes de dialogue sans quitter Unity.</li>
-                <li>Associer un texte à un intervenant et à un minutage.</li>
-                <li>Prévisualiser le résultat avant de lancer la scène.</li>
+                <li>Créer le système de reconnaissance vocale.</li>
+                <li>Ajouter des mots clés pour les commandes vocales.</li>
+                <li>Associer les mécaniques de dépacements aux commandes vocales.</li>
               </ul>
             </section>
 
@@ -300,9 +299,13 @@
             <section class="rd-doc__section">
               <h3>03 — Fonctionnement</h3>
               <p>
-                Chaque entrée contient le texte, l’identifiant du personnage, la durée
-                d’affichage et les options de présentation. Les données sont enregistrées
-                dans un asset dédié, puis lues au lancement de la scène.
+                Grâce à la librairie Unity.Windows.Speech, j'initie le système de reconnaissance vocale en associant des mots clés à des actions
+                grâce à un dictionnaire. Le système écoute en permanence les commandes vocales et déclenche les actions correspondantes que je défini
+                au lancement du jeu.
+                Au cours de la partie, le système enregistre le nombre de commandes vocales reçues. Et tous les X secondes, il regarde les commandes
+                reçues et déclenche l'action de la commande la plus entendue.
+                Cette feature est faite pour qu'un groupe de joueur puisse être aux commandes du personnage et que le personnage se déplace
+                en fonction de la majorité des commandes reçues.
               </p>
             </section>
 
@@ -319,18 +322,13 @@
             <section class="rd-doc__section">
               <h3>04 — Résultat et limites</h3>
               <p>
-                L’outil facilite les modifications rapides et la relecture du contenu.
-                Il reste à améliorer la prévisualisation des longues répliques et la
-                gestion des traductions.
+                
               </p>
             </section>
 
             <section class="rd-doc__section rd-doc__section--highlight">
               <h3>05 — Prochaines étapes</h3>
-              <ul>
-                <li>Ajouter une prévisualisation des différentes résolutions.</li>
-                <li>Étudier l’import et l’export de fichiers de traduction.</li>
-              </ul>
+              
             </section>
           </template>
         
